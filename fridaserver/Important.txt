@@ -1,0 +1,7 @@
+----- Frida Tools Runs ----
+
+$ adb root 
+$ adb push /Users/name/Downloads/extras/frida-server /data/local/tmp/
+$ adb shell "chmod 755 /data/local/tmp/frida-server"
+$ adb shell "/data/local/tmp/frida-server &"
+
