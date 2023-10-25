@@ -1,0 +1,57 @@
+{
+  "name": "rms-runtime-mobile-security",
+  "version": "1.5.14",
+  "description": "Runtime Mobile Security (RMS), powered by FRIDA, is a powerful web interface that helps you to manipulate Android and iOS Apps at Runtime",
+  "main": "rms.js",
+  "bin": {
+    "RMS-Runtime-Mobile-Security": "./rms.js",
+    "rms": "./rms.js"
+  },
+  "compilerOptions": {
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  },
+  "scripts": {
+    "prepare": "npm run compile",
+    "compile": "frida-compile agent/RMS_core.js -o agent/compiled_RMS_core.js",
+    "watch": "frida-compile agent/RMS_core.js -o agent/compiled_RMS_core.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m0bilesecurity/RMS-Runtime-Mobile-Security.git"
+  },
+  "keywords": [
+    "Mobile Security",
+    "Android Security",
+    "iOS Security",
+    "Reverse Engineering",
+    "NodeJS",
+    "Mobile",
+    "Security",
+    "FRIDA",
+    "RMS"
+  ],
+  "author": "@mobilesecurity_",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/m0bilesecurity/RMS-Runtime-Mobile-Security/issues"
+  },
+  "homepage": "https://github.com/m0bilesecurity/RMS-Runtime-Mobile-Security",
+  "dependencies": {
+    "@types/node": "^20.4.4",
+    "body-parser": "^1.20.1",
+    "compile": "^0.0.2",
+    "express": "^4.18.2",
+    "frida": "^16.0.7",
+    "frida-compile": "^16.1.4",
+    "frida-fs": "^5.2.1",
+    "node-datetime": "^2.1.2",
+    "npm": "^9.5.1",
+    "nunjucks": "^3.2.3",
+    "or": "^0.2.0",
+    "run": "^1.4.0",
+    "socket.io": "^4.5.4"
+  }
+}
